@@ -4,7 +4,7 @@
   background-color: white;
   display: flex;
 
-  @include mobile{
+  @include mobile {
     flex-direction: column;
     align-items: center;
   }
@@ -12,6 +12,42 @@
   .left {
     flex: 0.5;
     overflow: hidden;
+
+    .wrapper {
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 0 0 #ff5823;
+      border-radius: 50%;
+      height: 400px;
+      width: 400px;
+      margin: 60px 0 0 100px;
+
+      @include mobile {
+        margin: 1rem;
+        height: 350px;
+        width: 350px;
+      }
+
+
+      .background {
+        height: 80%;
+        width: 80%;
+        background-image: url('../images/i.jpg');
+        background-size: cover;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &:hover {
+          transform: scale(1.3);
+          transition: 1s ease-out;
+        }
+      }
+
+
+    }
 
     .imgContainer {
       width: 700px;
@@ -23,19 +59,20 @@
       justify-content: center;
       float: right;
 
-      @include mobile{
+      @include mobile {
         align-items: flex-start;
       }
 
       img {
         height: 90%;
 
-        @include mobile{
+        @include mobile {
           height: 50%;
         }
       }
     }
   }
+
   .right {
     flex: 0.5;
     position: relative;
@@ -48,7 +85,7 @@
       flex-direction: column;
       justify-content: center;
 
-      @include mobile{
+      @include mobile {
         padding-left: 0;
         align-items: center;
       }
@@ -57,17 +94,19 @@
         font-size: 60px;
         margin: 10px 0;
 
-        @include mobile{
+        @include mobile {
           font-size: 40px;
         }
       }
+
       h2 {
         font-size: 35px;
       }
+
       h3 {
         font-size: 30px;
 
-        @include mobile{
+        @include mobile {
           font-size: 20px;
         }
 
@@ -81,15 +120,17 @@
         }
 
         @keyframes blink {
-            50%{
-                opacity: 1;
-            }
-            100%{
-                opacity: 0;
-            }
+          50% {
+            opacity: 1;
+          }
+
+          100% {
+            opacity: 0;
+          }
         }
       }
     }
+
     a {
       position: absolute;
       bottom: 10px;
