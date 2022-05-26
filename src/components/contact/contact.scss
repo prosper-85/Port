@@ -62,8 +62,10 @@
         width: 300px;
         padding: .7rem;
         border: none;
-        border-bottom: 1px solid hsl(205, 86%, 81%);
+        border-bottom: 1px solid #ff5823;
         border-radius: 10px;
+        outline-color: #ff5823;
+        outline-style: groove;
         background: transparent;
         font-size: .8rem;
         // margin-bottom: 15px;
@@ -73,6 +75,7 @@
         }
 
         @include mobile {
+          width: 240px;
           font-size: .7rem;
           // padding: .5rem;
         }
@@ -84,7 +87,7 @@
 
         @include mobile {
           margin-bottom: auto;
-          font-size: 9px;
+          font-size: 13px;
         }
       }
 
@@ -93,7 +96,7 @@
 
         @include mobile {
           width: 100%;
-          flex-direction: column;
+          // flex-direction: column;
         }
       }
 
@@ -103,12 +106,13 @@
         width: 300px;
         padding: .4rem;
         border: none;
-        border-bottom: 1px solid hsl(205, 86%, 81%);
+        border-bottom: 1px solid #ff5823;
         font-size: .8rem;
-        // margin-bottom: 10px;
         background: transparent;
-
-
+        outline-color: #ff5823;
+        border-radius: 10px;
+        outline-color: #ff5823;
+        outline-style: groove;
 
 
         &::placeholder {
@@ -116,8 +120,7 @@
         }
 
         @include mobile {
-          // width: 100px;
-          // height: 100px;
+          width: 250px;
         }
       }
 
