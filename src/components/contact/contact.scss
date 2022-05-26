@@ -74,7 +74,7 @@
 
         @include mobile {
           font-size: .7rem;
-          padding: .5rem;
+          // padding: .5rem;
         }
       }
 
@@ -83,6 +83,7 @@
         margin: 10px;
 
         @include mobile {
+          margin-bottom: auto;
           font-size: 9px;
         }
       }
@@ -92,6 +93,7 @@
 
         @include mobile {
           width: 100%;
+          flex-direction: column;
         }
       }
 
