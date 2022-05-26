@@ -47,12 +47,13 @@
     }
 
     form {
-      width: 70%;
-      height: 90%;
+      // width: 70%;
+      // height: 90%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
+      gap: 25px;
 
       @include mobile {
         height: 87%;
@@ -62,9 +63,9 @@
         width: 300px;
         padding: .7rem;
         border: none;
-        border-bottom: 1px solid #ff5823;
+        border-bottom: 1px solid hsl(210, 22%, 49%);
         border-radius: 10px;
-        outline-color: #ff5823;
+        outline-color: hsl(210, 22%, 49%);
         outline-style: groove;
         background: transparent;
         font-size: .8rem;
@@ -106,12 +107,12 @@
         width: 300px;
         padding: .4rem;
         border: none;
-        border-bottom: 1px solid #ff5823;
+        border-bottom: 1px solid hsl(210, 22%, 49%);
         font-size: .8rem;
         background: transparent;
-        outline-color: #ff5823;
+        outline-color: hsl(210, 22%, 49%);
         border-radius: 10px;
-        outline-color: #ff5823;
+        outline-color: hsl(210, 22%, 49%);
         outline-style: groove;
 
 
@@ -126,6 +127,8 @@
 
       .error {
         border-bottom-color: red;
+        outline-style: groove;
+        outline-color: red;
       }
 
       button {
