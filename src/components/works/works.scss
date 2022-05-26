@@ -96,19 +96,23 @@
                 }
               }
             }
+
             h2 {
               font-size: 20px;
 
-              @include mobile{
+              @include mobile {
                 font-size: 13px;
               }
             }
+
             p {
               font-size: 13px;
-              @include mobile{
+
+              @include mobile {
                 display: none;
               }
             }
+
             span {
               font-size: 12px;
               font-weight: 600;
@@ -117,6 +121,7 @@
             }
           }
         }
+
         .right {
           flex: 8;
           height: 100%;

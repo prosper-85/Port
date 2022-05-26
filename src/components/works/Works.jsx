@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./works.scss";
 
-export default function Works() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+export default function Works ()
+{
+  const [ currentSlide, setCurrentSlide ] = useState( 0 );
   const data = [
     {
       id: "1",
@@ -33,20 +34,21 @@ export default function Works() {
     },
   ];
 
-  const handleClick = (way) => {
+  const handleClick = ( way ) =>
+  {
     way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-      : setCurrentSlide(currentSlide < data.length - 1 ? currentSlide + 1 : 0);
+      ? setCurrentSlide( currentSlide > 0 ? currentSlide - 1 : 2 )
+      : setCurrentSlide( currentSlide < data.length - 1 ? currentSlide + 1 : 0 );
   };
-  
+
   return (
     <div className="works" id="works">
       <div
         className="slider"
-        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+        style={{ transform: `translateX(-${ currentSlide * 100 }vw)` }}
       >
-        {data.map((d) => (
-          <div className="container">
+        {data.map( ( d ) => (
+          <div className="container" key={d.id}>
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
@@ -66,13 +68,13 @@ export default function Works() {
               </div>
             </div>
           </div>
-        ))}
+        ) )}
       </div>
       <img
         src="assets/arrow.png"
         className="arrow left"
         alt=""
-        onClick={() => handleClick("left")}
+        onClick={() => handleClick( "left" )}
       />
       <img
         src="assets/arrow.png"

@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .portfolio {
-  background-color: white;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@
   h1 {
     font-size: 50px;
 
-    @include mobile{
+    @include mobile {
       font-size: 20px;
     }
   }
@@ -20,7 +20,7 @@
     list-style: none;
     display: flex;
 
-    @include mobile{
+    @include mobile {
       margin: 10px 0;
       flex-wrap: wrap;
       justify-content: center;
@@ -34,7 +34,7 @@
     justify-content: center;
     flex-wrap: wrap;
 
-    @include mobile{
+    @include mobile {
       width: 100%;
     }
 
@@ -52,7 +52,7 @@
       transition: all .5s ease;
       cursor: pointer;
 
-      @include mobile{
+      @include mobile {
         width: 130px;
         height: 100px;
       }
@@ -71,6 +71,7 @@
 
       &:hover {
         background-color: $mainColor;
+
         img {
           opacity: 0.2;
           z-index: 0;

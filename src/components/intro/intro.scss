@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .intro {
-  background-color: white;
+  background-color: transparent;
   display: flex;
 
   @include mobile {
@@ -10,7 +10,7 @@
   }
 
   .left {
-    flex: 0.5;
+    flex: 1;
     overflow: hidden;
 
     .wrapper {
@@ -41,7 +41,7 @@
         background-repeat: no-repeat;
 
         &:hover {
-          transform: scale(1.3);
+          transform: scale(1);
           transition: 1s ease-out;
         }
       }
@@ -74,10 +74,14 @@
   }
 
   .right {
-    flex: 0.5;
-    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
     .wrapper {
+      flex: 3;
       width: 100%;
       height: 100%;
       padding-left: 50px;
@@ -112,7 +116,7 @@
 
         span {
           font-size: inherit;
-          color: crimson;
+          color: #ff5823;
         }
 
         .ityped-cursor {
@@ -131,19 +135,42 @@
       }
     }
 
-    a {
-      position: absolute;
-      bottom: 10px;
-      left: 40%;
+    .btn-wrapper {
+      margin-bottom: 20px;
+      flex: 1;
+      align-self: flex-start;
+      margin-left: 3rem;
 
-      img {
-        width: 30px;
-        animation: arrowBlink 2s infinite;
+      @include mobile {
+        align-self: center;
       }
 
-      @keyframes arrowBlink {
-        100% {
-          opacity: 0;
+      .btn {
+        text-transform: capitalize;
+        margin-left: 10px;
+        padding: 0.5rem;
+        border-radius: 20px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .hire {
+        background-color: white;
+
+        &:hover {
+          background-color: #dfdcdb;
+          border-color: #ff5823;
+        }
+      }
+
+      .resume {
+        background-color: #ff5823;
+        color: #fff;
+        border-color: #ff5823;
+
+        &:hover {
+          background-color: #fa855e;
+          border-color: #ff5823;
         }
       }
     }

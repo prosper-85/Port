@@ -26,14 +26,17 @@ export default function Intro ()
       <div className="right">
         <div className="wrapper">
           <h2>Hi There, I'm</h2>
-          <h1>HoluWatobi</h1>
+          <h1>HoluwaTobi</h1>
           <h3>
             Freelance <span ref={textRef}></span>
           </h3>
         </div>
-        <a href="#portfolio">
-          <img src="assets/down.png" alt="" />
-        </a>
+        <div className="btn-wrapper">
+          <a href="#contact">
+            <button className="btn hire">hire me</button>
+          </a>
+          <a href="assets/tobi.pdf" target="_blank" rel="noopener noreferrer"><button className="btn resume">get resume</button></a>
+        </div>
       </div>
     </div>
   );

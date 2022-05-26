@@ -1,6 +1,7 @@
 import "./testimonials.scss";
 
-export default function Testimonials() {
+export default function Testimonials ()
+{
   const data = [
     {
       id: 1,
@@ -38,8 +39,8 @@ export default function Testimonials() {
     <div className="testimonials" id="testimonials">
       <h1>Testimonials</h1>
       <div className="container">
-        {data.map((d) => (
-          <div className={d.featured ? "card featured" : "card"}>
+        {data.map( ( d ) => (
+          <div className={d.featured ? "card featured" : "card"} key={d.id}>
             <div className="top">
               <img src="assets/right-arrow.png" className="left" alt="" />
               <img
@@ -57,7 +58,7 @@ export default function Testimonials() {
               <h4>{d.title}</h4>
             </div>
           </div>
-        ))}
+        ) )}
       </div>
     </div>
   );
