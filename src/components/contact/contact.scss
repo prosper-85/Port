@@ -1,0 +1,149 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: transparent;
+  display: flex;
+
+
+  @include mobile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background-color: aquamarine;
+  }
+
+  .left {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      // padding: 20px;
+      width: 75%;
+    }
+  }
+
+  .right {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: none;
+
+      @include mobile {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+    }
+
+    form {
+      // width: 70%;
+      // height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      // gap: 10px;
+      flex: 3;
+
+      @include mobile {
+        height: 87%;
+      }
+
+      .input {
+        width: 300px;
+        padding: .7rem;
+        border: none;
+        border-bottom: 1px solid hsl(210, 22%, 49%);
+        border-radius: 10px;
+        outline-color: hsl(210, 22%, 49%);
+        // outline-style: groove;
+        background: transparent;
+        font-size: .8rem;
+        // margin-bottom: 15px;
+
+        &::placeholder {
+          color: hsl(210, 22%, 49%);
+        }
+
+        @include mobile {
+          width: 240px;
+          font-size: .7rem;
+          // padding: .5rem;
+        }
+      }
+
+      label {
+        font-size: 15px;
+        margin: 10px;
+        flex: 1;
+
+        @include mobile {
+          margin-bottom: auto;
+          font-size: 13px;
+        }
+      }
+
+      .msg {
+        display: flex;
+
+        @include mobile {
+          width: 100%;
+          // flex-direction: column;
+        }
+      }
+
+
+
+      .textarea {
+        width: 300px;
+        padding: .7rem;
+        border: none;
+        border-bottom: 1px solid hsl(210, 22%, 49%);
+        font-size: .8rem;
+        background: transparent;
+        outline-color: hsl(210, 22%, 49%);
+        border-radius: 10px;
+        &::placeholder {
+          color: hsl(210, 22%, 49%);
+        }
+
+        @include mobile {
+          width: 250px;
+        }
+      }
+
+      .error {
+        border-bottom-color: red;
+        // outline-style: groove;
+        outline-color: red;
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: rgb(31, 207, 31);
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 0 0.5rem;
+
+        &:hover {
+          background-color: rgb(0, 124, 0);
+        }
+      }
+    }
+  }
+}
